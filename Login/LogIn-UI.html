@@ -172,21 +172,39 @@ form div {
 }
 
 @media (max-width: 600px) {
+  .main-container {
+    margin-top: 0;
+    max-width: 100%;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    
+  }
+  .container {
+    align-items: center;
+    margin: 0;  
 
+  }
+.main-title {
+  font-size: 1px;
+  display: inline;
+  text-align: center;
+}
   body {
+    width: 100%;
     align-items: center;
     vertical-align: middle;
   }
 .form-container {
+  margin:50px 0 0 0;
   justify-content: center;
   align-items: center;
    width: 380px;
-   height: 900px;
+   height: 500px;
    background-color: rgb(255, 255, 255);
    animation-name: form-ani;
    animation-duration: 0.5s; 
    position: relative;
-   background: transparent;
    backdrop-filter: blur(10px);
 }
 
@@ -242,7 +260,13 @@ input {
 .dhaa {
   width: 100%;
 }
+.signup-container {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-right: 0px;
 
+}
 }
 </style>
 <body>
