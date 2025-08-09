@@ -2,273 +2,275 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <script src="https://kit.fontawesome.com/57a739b7d7.js" crossorigin="anonymous"></script>
-    <title>Log In</title>
-    <link rel="icon" type="image/x-icon" href="../img/img/wecollect-web-icon.svg">    
-    <link rel="stylesheet" href="LogIn-UI.css">
-   
-</head>
-<style>
-    * {
-  padding: 0;
-  margin: 0;
-  font-family: sans-serif;
-}
-body {
-  background-color: rgb(235, 235, 235);
-  background-image: url(../Contents-LandingPage/img/Backgound\ image\ \(yellow\).jpg);
-}
-.main-container {
-  display: flex;
-  justify-content: space-around;
-  margin-top: 10%;
-}
-.main-title h1{
-  color: green;
-}
-.main-title .span {
-  color: yellowgreen
-}
-.container {
-  display: flex;
-  align-items: center;
-  justify-content: space-around; 
-}
-.form-container {
-  padding: 70px;
-  justify-content: center;
-  align-items: center;
-   width: 900px;
-   height: 380px;
-   background-color: rgb(255, 255, 255);
-   box-shadow: 10px 10px 20px rgb(0, 0, 0);
-   border-radius: 150px 0px 0px 150px;
-   margin-left: 230px;
-   animation-name: form-ani;
-   animation-duration: 0.5s; 
-   position: relative;
-   background: transparent;
-   backdrop-filter: blur(10px);
-}
+    <title>Log In - Mobile Responsive</title>
+    <link rel="icon" type="image/x-icon" href="../img/img/wecollect-web-icon.svg">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        }
 
-@keyframes form-ani {
-  0%   {left:100%;}
-  100%  {left:0px;}
-}
+        body {
+            background-color: #f5f5f5;
+            background-image: url(../Contents-LandingPage/img/Backgound\ image\ \(yellow\).jpg);
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
 
-.form-container .buttons {
-  text-align: center;
-}
-.form-container .email {
-  margin-bottom: 20px;
-}
-.form-container p {
-  margin-bottom: 10px;
-}
-p {
-  font-size: x-large;
-}
-button {
-  font-size: xx-large;
-  width: 350px;
-  cursor: pointer;
-  transition: 0.1s;
+        .main-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
 
-}
-button:hover {
-  opacity: 0.8;
-}
-input {
-  height: 50px;
-  width: 400px;
-  font-size: x-large;
-  border-radius: 10px;
-}
-.buttons {
-  margin-top: 20px;        
-}
-.buttons button {
-  padding: 5px;
-  font-weight: bold;
-  background-color: rgb(31, 29, 182);
-  color: aliceblue;
-  margin-right: 480px;
-}
-.signup-container a button {
-  padding: 5px;
-  border: none;
-  color: aliceblue;
-  background-color: green;
-}
-.dhaa {
-  margin: 20px;
-}
-h1 {
-  font-size: 100px;
-  color: rgb(31, 29, 182);
-  font-weight: 1000;
-  animation-name: h1-anim;
-  animation-duration: 0.5s;
-  position: relative;
-}
-@keyframes h1-anim {
-  0%   {left:100%;}
-  100%  {left:0px;}
-}
-h2 {
-  font-size: 50px;
-  animation-name: h2-anim;
-  animation-duration: 0.6s;
-  position: relative;
-}
-@keyframes h2-anim {
-  0%   {top: 100%;;}
-  100%  {top: 0px;}
-}
-h2 span {
- color: black;
-}
-.main-title {
-  margin-top: 70px;
-  margin-left: 50px;
-}
-.signup-container {
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  margin-right: 480px;
-}
-.signup-container .dhaa {
-  color: rgb(29, 46, 194);
-}
-form div {
-  margin: 5px;
-}
-.input-box input {
-  width: 100%;
-  background: transparent;
-  border: none;
-  outline: none;
-  font-weight: bolder;
-}
-.input-box {
-  border-bottom: 2px solid black;
-  width: 400px;
-}
+        .main-title {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
 
-.pass {
-  display: flex;
-  align-items: center;
-} 
+        .main-title h1 {
+            font-size: 2.5rem;
+            color: rgb(31, 29, 182);
+            font-weight: 1000;
+            margin-bottom: 0.5rem;
+        }
 
-.pass i {
-  font-size: 30px;
-  transition: 0.3s;
-}
-.pass i:hover {
-  cursor: pointer;
-  opacity: 0.6;
-}
+        .main-title .span {
+            color: yellowgreen;
+        }
 
-@media (max-width: 600px) {
-  .main-container {
-    margin-top: 0;
-    max-width: 100%;
-    display: block;
-    align-items: center;
-    justify-content: center;
-    
-  }
-  .container {
-    align-items: center;
-    margin: 0;  
+        .main-title h2 {
+            font-size: 1.5rem;
+            color: #333;
+        }
 
-  }
-.main-title {
-  font-size: 1px;
-  display: inline;
-  text-align: center;
-}
-  body {
-    width: 100%;
-    align-items: center;
-    vertical-align: middle;
-  }
-.form-container {
-  margin:50px 0 0 0;
-  justify-content: center;
-  align-items: center;
-   width: 380px;
-   height: 500px;
-   background-color: rgb(255, 255, 255);
-   animation-name: form-ani;
-   animation-duration: 0.5s; 
-   position: relative;
-   backdrop-filter: blur(10px);
-}
+        .main-title h2 span {
+            color: #666;
+        }
 
-@keyframes form-ani {
-  0%   {left:100%;}
-  100%  {left:0px;}
-}
+        .form-container {
+            width: 100%;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
 
-.form-container .buttons {
-  text-align: center;
-}
-.form-container .email {
-  margin-bottom: 20px;
-}
-.form-container p {
-  margin-bottom: 10px;
-}
-p {
-  font-size: x-large;
-}
-button {
-  font-size: xx-large;
-  width: 350px;
-  cursor: pointer;
-  transition: 0.1s;
+        .input-box {
+            margin-bottom: 1.5rem;
+        }
 
-}
-button:hover {
-  opacity: 0.8;
-}
-input {
-  height: 50px;
-  width: 400px;
-  font-size: x-large;
-  border-radius: 10px;
-}
-.buttons {
-  margin-top: 20px;        
-}
-.buttons button {
-  padding: 5px;
-  font-weight: bold;
-  background-color: rgb(31, 29, 182);
-  color: aliceblue;
-  margin-right: 480px;
-}
-.signup-container a button {
-  padding: 5px;
-  border: none;
-  color: aliceblue;
-  background-color: green;
-}
-.dhaa {
-  width: 100%;
-}
-.signup-container {
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  margin-right: 0px;
+        .input-box label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: #333;
+            font-size: 1rem;
+        }
 
-}
-}
-</style>
+        .input-box input {
+            width: 100%;
+            padding: 0.8rem;
+            font-size: 1rem;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            background: transparent;
+            transition: all 0.3s ease;
+        }
+
+        .input-box input:focus {
+            outline: none;
+            border-color: rgb(31, 29, 182);
+            box-shadow: 0 0 0 3px rgba(31, 29, 182, 0.1);
+        }
+
+        .pass {
+            position: relative;
+        }
+
+        .pass i {
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 1.2rem;
+            cursor: pointer;
+            color: #666;
+        }
+
+        .buttons {
+            margin-top: 2rem;
+        }
+
+        .buttons button {
+            width: 100%;
+            padding: 0.9rem;
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: white;
+            background: rgb(31, 29, 182);
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .buttons button:hover {
+            background: rgb(25, 20, 150);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(31, 29, 182, 0.3);
+        }
+
+        .signup-container {
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        .signup-container p {
+            margin-bottom: 1rem;
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        .signup-container a button {
+            padding: 0.8rem 1.5rem;
+            font-size: 1rem;
+            font-weight: bold;
+            color: white;
+            background: green;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .signup-container a button:hover {
+            background: darkgreen;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 128, 0, 0.3);
+        }
+
+        /* Responsive breakpoints */
+        @media (max-width: 480px) {
+            body {
+                padding: 10px;
+            }
+
+            .main-container {
+                max-width: 100%;
+                padding: 10px;
+            }
+
+            .main-title h1 {
+                font-size: 2rem;
+            }
+
+            .main-title h2 {
+                font-size: 1.2rem;
+            }
+
+            .form-container {
+                padding: 1.5rem;
+                border-radius: 15px;
+            }
+
+            .input-box input {
+                font-size: 0.9rem;
+                padding: 0.7rem;
+            }
+
+            .buttons button,
+            .signup-container a button {
+                font-size: 1rem;
+                padding: 0.8rem;
+            }
+        }
+
+        @media (max-width: 375px) {
+            .main-title h1 {
+                font-size: 1.8rem;
+            }
+
+            .main-title h2 {
+                font-size: 1.1rem;
+            }
+
+            .form-container {
+                padding: 1.2rem;
+            }
+        }
+
+        @media (max-width: 320px) {
+            .main-title h1 {
+                font-size: 1.6rem;
+            }
+
+            .main-title h2 {
+                font-size: 1rem;
+            }
+
+            .form-container {
+                padding: 1rem;
+            }
+        }
+
+        /* Landscape orientation */
+        @media (max-height: 600px) and (orientation: landscape) {
+            .main-container {
+                flex-direction: row;
+                max-width: 100%;
+                gap: 1rem;
+            }
+
+            .main-title {
+                flex: 0 0 40%;
+            }
+
+            .container {
+                flex: 0 0 60%;
+            }
+
+            .form-container {
+                max-height: 90vh;
+                overflow-y: auto;
+            }
+        }
+
+        /* High DPI displays */
+        @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+            .form-container {
+                backdrop-filter: blur(20px);
+            }
+        }
+
+        /* Touch-friendly improvements */
+        @media (hover: none) and (pointer: coarse) {
+            .buttons button,
+            .signup-container a button {
+                min-height: 44px;
+            }
+
+            .input-box input {
+                min-height: 44px;
+            }
+        }
+    </style>
 <body>
     <div class="main-container">
         <div class="main-title">
@@ -279,22 +281,22 @@ input {
             <div class="form-container">            
                 <form action="">
                     <div class="email input-box">
-                        <p>Username: </p>
+                        <label for="inp">Username:</label>
                         <input type="text" maxlength="50" required id="inp">
-                        
                     </div>
                     <div class="input-box">
-                        <p>Password: </p>
+                        <label for="inp2">Password:</label>
                         <div class="pass">
-                        <input type="password" maxlength="15" required id="inp2"><i class="fa-solid fa-eye" id="eye-icon"></i>
+                            <input type="password" maxlength="15" required id="inp2">
+                            <i class="fa-solid fa-eye" id="eye-icon"></i>
                         </div>
                     </div>
-                <div class="buttons">
-                    <button onclick="login()">Log In</button>
-                </div>
+                    <div class="buttons">
+                        <button type="button" onclick="login()">Log In</button>
+                    </div>
                 </form>
                 <div class="signup-container"> 
-                    <p class="dhaa">Don't have an account?</p>
+                    <p>Don't have an account?</p>
                     <a href="Signup-UI.html"><button>Sign up</button></a>
                 </div>
             </div>  
@@ -302,6 +304,5 @@ input {
     </div>
 
     <script src="LogIn-UI.js"></script>
-
 </body>
-</html> 
+</html>
