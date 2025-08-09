@@ -170,6 +170,80 @@ form div {
   cursor: pointer;
   opacity: 0.6;
 }
+
+@media (max-width: 600px) {
+
+  body {
+    align-items: center;
+    vertical-align: middle;
+  }
+.form-container {
+  justify-content: center;
+  align-items: center;
+   width: 380px;
+   height: 900px;
+   background-color: rgb(255, 255, 255);
+   animation-name: form-ani;
+   animation-duration: 0.5s; 
+   position: relative;
+   background: transparent;
+   backdrop-filter: blur(10px);
+}
+
+@keyframes form-ani {
+  0%   {left:100%;}
+  100%  {left:0px;}
+}
+
+.form-container .buttons {
+  text-align: center;
+}
+.form-container .email {
+  margin-bottom: 20px;
+}
+.form-container p {
+  margin-bottom: 10px;
+}
+p {
+  font-size: x-large;
+}
+button {
+  font-size: xx-large;
+  width: 350px;
+  cursor: pointer;
+  transition: 0.1s;
+
+}
+button:hover {
+  opacity: 0.8;
+}
+input {
+  height: 50px;
+  width: 400px;
+  font-size: x-large;
+  border-radius: 10px;
+}
+.buttons {
+  margin-top: 20px;        
+}
+.buttons button {
+  padding: 5px;
+  font-weight: bold;
+  background-color: rgb(31, 29, 182);
+  color: aliceblue;
+  margin-right: 480px;
+}
+.signup-container a button {
+  padding: 5px;
+  border: none;
+  color: aliceblue;
+  background-color: green;
+}
+.dhaa {
+  width: 100%;
+}
+
+}
 </style>
 <body>
     <div class="main-container">
