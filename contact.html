@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Waste</title>
+  <link rel="icon" type="image/x-icon" href="img/img/wecollect-web-icon.svg">
+  <link rel="stylesheet" href="css/nav-style.css">
+</head>
+<style>
+   /* navlinks fx */
+   .nav-links #contact {
+      color: #1f4127;
+    }
+    .nav-links #contact:hover {
+      color: #00f811;
+    }
+  
+  body {
+  background-color: #e2e2e2;
+}
+  /* contact */
+  .contact {
+      max-width: 800px;
+      margin: 210px auto;
+      background-color: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+      padding: 40px;
+      
+    }
+
+    .contact h2 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    .contact p {
+      text-align: center;
+      color: #666;
+      margin-bottom: 30px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    input, textarea {
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+      resize: none;
+    }
+
+    input:focus, textarea:focus {
+      border-color: #2e7d32;
+      outline: none;
+    }
+
+    button {
+      padding: 12px;
+      background-color: #2e7d32;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #1b5e20;
+    }
+
+    @media (max-width: 600px) {
+      .contact {
+        padding: 20px;
+      }
+    }
+
+    /* animation to up (form) */
+    @keyframes slideUp {
+        from {
+          opacity: 0;
+          transform: translateY(50px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .contact {
+        opacity: 0;
+        animation: slideUp .5s ease-out forwards;
+        animation-delay: .2s; /* delay to appear after sub-text3 */
+      }
+</style>
+<body>
+<main>
+  <div class="nav-bar-container">
+    <nav>
+      <div class="logo">
+        <a href="index.html"><img src="img/img/WeCollect-logo.svg" alt="logo"></a>
+      </div>
+        <div class="nav-links">
+          <ul>
+            <li><a id="" href="index.html">Home</a></li>
+            <li><a id="" href="your-waste.html">Your Waste</a></li>
+            <li><a id="" href="sectors.html">Sectors</a></li>
+            <li><a id="" href="free-items.html">Free Items</a></li>
+            <li><a id="" href="services.html">Services</a></li>
+            <li><a id="" href="location.html">Location</a></li>
+            <li><a id="" href="news.html">News</a></li>
+            <li><a id="contact" href="contact.html">Contact</a></li>
+            <li><a id="logout" href="Login/LogIn-UI.html">Log Out</a></li>
+          </ul>
+        </div>
+    </nav>
+  </div>
+
+  <section class="contact">
+    <h2>Contact Us</h2>
+    <p>Have questions or feedback? Send us a message!</p>
+    <form id="contactForm">
+      <input type="text" id="name" name="name" placeholder="Your Full Name" required>
+      <input type="email" id="email" name="email" placeholder="Your Email Address" required>
+      <textarea id="message" name="message" rows="6" placeholder="Your Message" required></textarea>
+      <button type="submit" onclick="SendMessage(event)">Send Message</button>
+    </form>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="logo-content">
+        <a href="index.html"><img src="img/img/WeCollect-logo.svg" alt="logo" class="logo-img"></a>
+        <p>123-456-789</p>
+      </div>
+      <div class="footer-links-container">
+        <div class="message">
+          <p>
+            We Collect offers reliable and eco-friendly waste collection services. From household to commercial waste, we help keep communities clean while promoting sustainability.
+            </p>
+        </div>
+        <div class="footer-wastetypes">
+          <strong>Waste Types</strong>
+          <ul class="waste-types">
+            <li>
+              <a href="your-waste-contents/cardboard -waste.html">Cardboard Waste</a>
+            </li>
+            <li>
+              <a href="your-waste-contents/clinical-waste.html">Clinical Waste</a>
+            </li>
+            <li>
+              <a href="your-waste-contents/confidential-waste.html">Confidential Waste</a>
+            </li>
+            <li>
+              <a href="your-waste-contents/dry-mixed-recycling.html">Dry Mixed Recycling</a>
+            </li>
+            <li>
+              <a href="your-waste-contents/general-waste.html">General Waste</a>
+            </li>
+            <li>
+              <a href="your-waste-contents/glass-waste.html">Glass Waste</a>
+            </li>
+            <li>
+              <a href="your-waste-contents/plastic-waste.html">Plastic Waste</a>
+            </li>
+            <li>
+              <a href="your-waste.html">All Waste</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-sectors">
+          <strong>Sectors</strong>
+          <ul class="sectors">
+            <li>
+              <a href="sectors-contents/healthcare.html">Healthcare</a>
+            </li>
+            <li>
+              <a href="sectors-contents/education.html">Education</a>
+            </li>
+            <li>
+              <a href="sectors-contents/retail.html">Retail</a>
+            </li>
+            <li>
+              <a href="sectors-contents/hospitality.html">Hospitality</a>
+            </li>
+            <li>
+              <a href="sectors-contents/offices.html">Offices</a>
+            </li>
+            <li>
+              <a href="sectors-contents/construction.html">Construction</a>
+            </li>
+            <li>
+              <a href="sectors-contents/transportation.html">Transfortation & Logistics</a>
+            </li>
+            <li>
+              <a href="sectors-contents/factories.html">Factories & Manufacturing</a>
+            </li>
+            <li>
+              <a href="sectors.html">All Sectors</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-services">
+          <strong>Services</strong>
+          <ul class="services">
+            <li>
+              <a href="services-contents/waste-collection.html">Waste Collection</a>
+            </li>
+            <li>
+              <a href="services-contents/waste-consultant.html">Waste Consultant</a>
+            </li>
+            <li>
+              <a href="services-contents/waste-management-plan.html">Waste Management</a>
+            </li>
+            <li>
+              <a href="services-contents/waste-audit.html">Waste Audit</a>
+            </li>
+            <li>
+              <a href="services-contents/waste-management-plan.html">Waste Management Plan</a>
+            </li>
+            <li>
+              <a href="services-contents/waste-disposal.html">Waste Disposal</a>
+            </li>
+            <li>
+              <a href="services-contents/commercial-recycling.html">Commercial Recycling</a>
+            </li>
+            <li>
+              <a href="services-contents/recycling-rebates.html">Recycling Rebates</a>
+            </li>
+            <li>
+              <a href="services-contents/business-waste-collection.html">Business Waste Collection</a>
+            </li>
+            <li>
+              <a href="services.html">All Services</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <strong>Popular</strong>
+          <ul>
+            <li><a id="" href="index.html">Home</a></li>
+            <li><a id="" href="your-waste.html">Your Waste</a></li>
+            <li><a id="" href="sectors.html">Sectors</a></li>
+            <li><a id="" href="free-items.html">Free Items</a></li>
+            <li><a id="" href="services.html">Services</a></li>
+            <li><a id="" href="location.html">Location</a></li>
+            <li><a id="" href="news.html">News</a></li>
+            <li><a id="" href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+</main>
+<script>
+   function SendMessage(event) {
+    event.preventDefault(); // Prevent actual form submission
+
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const message = document.getElementById("message").value.trim();
+
+    if (name === "" || email === "" || message === "") {
+      alert("Please fill in all fields before submitting.");
+      return;
+    }
+
+    alert("We received your message. Thank you!");
+    document.getElementById("contactForm").reset(); // Optional: reset the form
+  }
+</script>
+</body>
+</html>

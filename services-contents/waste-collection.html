@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/nav-style.css">
+  <link rel="icon" type="image/x-icon" href="../img/img/wecollect-web-icon.svg">  
+  <title>Waste Collection</title>
+</head>
+<style>
+   /* navlinks fx */
+   .nav-links #services {
+      color: #1f4127;
+    }
+    .nav-links #services:hover {
+      color: #00f811;
+    }
+  
+/*body/bg section*/
+.first-section {
+    margin: 30px 0;
+    display: flex;
+  }
+  .home-bg {
+    margin-top: 100px;
+    display: flex;
+    justify-content: baseline;
+  }
+
+
+  /*main-title section*/
+  .title-container {
+    margin: 20px 80px;
+    width: 50%;
+  }
+  .main-title h1 {
+    font-size: 50px;
+    color: #2e8b57; 
+  }
+  .sub-text p,
+  .sub-text2 p,
+  .sub-text3 p {
+  color: #3a5f47; 
+  font-weight: 500;
+  font-size: x-large;
+}
+  .sub-text3 p {
+    font-size: xx-large;
+  }
+
+
+  /*form section*/
+  .form-container {
+    border-radius: 10px;
+    margin-left: 200px;
+    width: 400px;
+    background: linear-gradient(135deg, #f0fff0, #d0f0c0);
+    display: flex;
+    justify-content: center;
+  }
+  .form-container .form {
+    text-align: center;
+  }
+  .benefits {
+  margin: 5px 0;
+  display: flex;
+  flex-direction: column;
+}
+.benefits .row1,
+.benefits .row2 {
+  display: flex;
+  justify-content: space-evenly;
+}
+.benefits p {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1em;
+  color: #2e5939; 
+  font-weight: 500;
+}
+.benefits p::before {
+  content: '✔️';
+  color: #00eb66; 
+  font-size: 1em;
+}
+ .inputs div input, textarea {
+  width: 100%;
+  padding: 12px 15px;
+  margin: 10px 0;
+  border: 1px solid #a3c9a8;        
+  border-radius: 8px;
+  background-color: #f5fff5;       
+  font-size: 1em;
+  color: #2e5939;                   
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+ }
+.inputs input:focus,
+.inputs textarea:focus {
+  border-color: #2e8b57;            
+  box-shadow: 0 0 5px rgba(46, 139, 87, 0.4);
+}
+ .inputs div input, textarea, .btn1 {
+  margin: 10px;
+  padding: 10px 5px;
+  width: 350px;
+ }
+ .inputs .btn-container1 .btn1 {
+  padding: 14px 30px;
+  background: linear-gradient(135deg, #4CAF50, #81C784); /* soft green gradient */
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 40px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 12px rgba(76, 175, 80, 0.4);
+  position: relative;
+  overflow: hidden;
+ } 
+ .inputs .btn-container1 .btn1::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  transition: left 0.4s ease;
+}
+
+.inputs .btn-container1 .btn1:hover::before {
+  left: 100%;
+}
+
+.inputs .btn-container1 .btn1:hover {
+  background: linear-gradient(135deg, #388E3C, #66BB6A);
+  transform: scale(1.06);
+  box-shadow: 0 8px 16px rgba(56, 142, 60, 0.5);
+}
+
+.inputs .btn-container1 .btn1::after {
+  content: " 🍃";
+  font-size: 20px;
+  margin-left: 8px;
+}
+
+/* second-section */
+.second-section-bg {
+  background-color: #f2f2f2;
+  padding: 100px 20px;
+}
+.second-section {
+      background-color: #ffffff;
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+      margin-top: 30  px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .second-section h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #2e8b57;
+      text-align: center;
+    }
+
+    .second-section p {
+      font-size: 1.3rem;
+      line-height: 1.8;
+      text-align: justify;
+
+    }
+
+    .btn-container {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      margin-top: 40px;
+    }
+
+    .btn {
+      background-color: #2e8b57;
+      color: white;
+      padding: 14px 28px;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .btn:hover {
+      background-color: #256d45;
+      transform: translateY(-3px);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    }
+
+       /* form highlight */
+       #contact-form {
+      scroll-margin-top: 200px;
+      transition: border 0.3s, box-shadow 0.3s;
+    }
+
+    #contact-form.highlight {
+      animation: highlightGlow 1s ease-in-out;
+      border: 2px solid #4CAF50;
+      box-shadow: 0 0 15px #4CAF50;
+      
+    }
+    @keyframes highlightGlow {
+      0% { box-shadow: 0 0 0px #4CAF50; }
+      50% { box-shadow: 0 0 15px #4CAF50; }
+      100% { box-shadow: 0 0 0px #4CAF50; }
+    }
+
+    .services-btn {
+      text-align: center;
+      margin-top: 70px;
+    }
+    .services-btn button {
+      padding: 12px 26px;
+      background-color: #ffffff;
+      color: #4CAF50;
+      font-size: 16px;
+      font-weight: 600;
+      border: 2px solid #4CAF50;
+      border-radius: 30px;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+
+    .services-btn button:hover {
+      background-color: #e8f5e9; /* very light green */
+      color: #388E3C;
+      transform: scale(1.03);
+      box-shadow: 0 6px 12px rgba(56, 142, 60, 0.2);
+      background-color: #4CAF50 ;
+      color: #ffffff;
+    }
+
+    /* animation to right (subtext) */
+    @keyframes slideRight {
+      from {
+        opacity: 0;
+        transform: translateX(-50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+      .main-title,
+      .sub-text,
+      .sub-text2,
+      .sub-text3 {
+        opacity: 0;
+        animation: slideRight 0.8s forwards;
+      }
+
+
+      .sub-text {
+        animation-delay: 0.2s;
+      }
+
+      .sub-text2 {
+        animation-delay: 0.6s;
+      }
+
+      .sub-text3 {
+        animation-delay: 1s;
+      }
+
+     
+</style>
+<body>
+  <main>
+    <div class="nav-bar-container">
+      <nav>
+        <div class="logo">
+          <a href="../index.html"><img src="../img/img/WeCollect-logo.svg" alt="logo" height=""></a>
+        </div>
+          <div class="nav-links">
+            <ul>
+              <li><a id="" href="../index.html">Home</a></li>
+              <li><a id="" href="../your-waste.html">Your Waste</a></li>
+              <li><a id="" href="../sectors.html">Sectors</a></li>
+              <li><a id="" href="../free-items.html">Free Items</a></li>
+              <li><a id="services" href="../services.html">Services</a></li>
+              <li><a id="" href="../location.html">Location</a></li>
+              <li><a id="" href="../news.html">News</a></li>
+              <li><a id="" href="../contact.html">Contact</a></li>
+              <li><a id="logout" href="../Login/LogIn-UI.html">Log Out</a></li>
+            </ul>
+          </div>
+      </nav>
+    </div>
+
+    <section class="first-section">
+      <div class="home-bg">
+        <div class="title-container">
+          <div class="main-title">
+            <h1>Waste Collection</h1>
+          </div>
+  
+          <div class="sub-text">
+            <p>
+              Say goodbye to waste worries with <em><span style="text-decoration: underline;">We Collect</span>. </em>
+              We offer hassle-free waste collection services designed 
+              to keep your home or business clean and contribute to a 
+              healthier environment.
+            </p>
+          
+          </div>
+
+          <div class="sub-text2">
+            <p>
+              We offer a comprehensive range of waste collection services, 
+              including residential pickup, 
+              commercial collection, recycling programs, special waste disposal, etc.
+            </p>
+          </div>
+
+          <div class="sub-text3">
+            <p>
+              Keeping Your Community <em><u>Clean</u> and <u>Healthy!</u></em>
+            </p>
+          </div>
+        </div>
+       
+        <div class="form-container" id="contact-form">
+          <form id="requestForm" action="../payment.html" class="form">
+            <h1>Request Waste Collection</h1>
+            <p>Collect any waste for all!</p>
+            <div class="benefits">
+              <div class="row1">
+                <p>Reliable Pickup</p>
+                <p>Affordable</p>
+              </div>
+              <div class="row2">
+                <p>Eco-Friendly</p>
+                <p>Convenient</p>
+              </div>
+            </div>
+            
+            <div class="inputs">
+              <div class="name">
+                <input type="text" placeholder="Your Name">
+              </div>
+              <div class="bus-name">
+                <input type="text" placeholder="Business Name">
+              </div>
+              <div class="phone">
+                <input type="tel" placeholder="Your Phone Number">
+              </div>
+              <div class="email">
+                <input type="email" placeholder="Your Email">
+              </div>
+              <div class="requirement">
+                <textarea name="" id="" cols="47" rows="6" placeholder="Your Requirement"></textarea>
+              </div>
+              <div class="btn-container1">
+                <button class="btn1">Submit Request</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <div class="second-section-bg">
+      <section class="second-section">
+        <h2>What is Business Waste Collection?</h2>
+        <p>
+          Business Waste Collection refers to the organized service of collecting, managing, and disposing of waste generated by businesses, offices, retail stores, restaurants, and other commercial establishments. This service ensures that all types of waste—such as general waste, recyclables, and hazardous materials—are handled in compliance with environmental regulations.
+          <br><br>
+          A reliable business waste collection system supports cleaner operations, helps companies meet legal requirements, and promotes sustainability. It also allows businesses to focus on their core activities while ensuring their waste is managed responsibly and efficiently.
+        </p>
+        <div class="btn-container">
+          <a href="../your-waste.html"><button class="btn">See your wastes</button></a>
+          <a href="#"><button class="btn" onclick="highlightForm()">Collect your wastes</button></a>
+        </div>
+      </section>
+      <div class="services-btn">
+        <a href="../services.html"><button>See all Services</button></a>
+      </div>  
+    </div>
+
+    
+<footer class="footer">
+  <div class="footer-content">
+    <div class="logo-content">
+      <a href="../index.html"><img src="../img/img/WeCollect-logo.svg" alt="logo" class="logo-img"></a>
+      <p>123-456-789</p>
+    </div>
+    <div class="footer-links-container">
+      <div class="message">
+        <p>
+          We Collect offers reliable and eco-friendly waste collection services. From household to commercial waste, we help keep communities clean while promoting sustainability.
+          </p>
+      </div>
+      <div class="footer-wastetypes">
+        <strong>Waste Types</strong>
+        <ul class="waste-types">
+          <li>
+            <a href="../your-waste-contents/cardboard -waste.html">Cardboard Waste</a>
+          </li>
+          <li>
+            <a href="../your-waste-contents/clinical-waste.html">Clinical Waste</a>
+          </li>
+          <li>
+            <a href="../your-waste-contents/confidential-waste.html">Confidential Waste</a>
+          </li>
+          <li>
+            <a href="../your-waste-contents/dry-mixed-recycling.html">Dry Mixed Recycling</a>
+          </li>
+          <li>
+            <a href="../your-waste-contents/general-waste.html">General Waste</a>
+          </li>
+          <li>
+            <a href="../your-waste-contents/glass-waste.html">Glass Waste</a>
+          </li>
+          <li>
+            <a href="../your-waste-contents/plastic-waste.html">Plastic Waste</a>
+          </li>
+          <li>
+            <a href="../your-waste.html">All Waste</a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer-sectors">
+        <strong>Sectors</strong>
+        <ul class="sectors">
+          <li>
+            <a href="../sectors-contents/healthcare.html">Healthcare</a>
+          </li>
+          <li>
+            <a href="../sectors-contents/education.html">Education</a>
+          </li>
+          <li>
+            <a href="../sectors-contents/retail.html">Retail</a>
+          </li>
+          <li>
+            <a href="../sectors-contents/hospitality.html">Hospitality</a>
+          </li>
+          <li>
+            <a href="../sectors-contents/offices.html">Offices</a>
+          </li>
+          <li>
+            <a href="../sectors-contents/construction.html">Construction</a>
+          </li>
+          <li>
+            <a href="../sectors-contents/transportation.html">Transfortation & Logistics</a>
+          </li>
+          <li>
+            <a href="../sectors-contents/factories.html">Factories & Manufacturing</a>
+          </li>
+          <li>
+            <a href="../sectors.html">All Sectors</a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer-services">
+        <strong>Services</strong>
+        <ul class="services">
+          <li>
+            <a href="waste-collection.html">Waste Collection</a>
+          </li>
+          <li>
+            <a href="waste-consultant.html">Waste Consultant</a>
+          </li>
+          <li>
+            <a href="waste-management-plan.html">Waste Management</a>
+          </li>
+          <li>
+            <a href="waste-audit.html">Waste Audit</a>
+          </li>
+          <li>
+            <a href="waste-management-plan.html">Waste Management Plan</a>
+          </li>
+          <li>
+            <a href="waste-disposal.html">Waste Disposal</a>
+          </li>
+          <li>
+            <a href="commercial-recycling.html">Commercial Recycling</a>
+          </li>
+          <li>
+            <a href="recycling-rebates.html">Recycling Rebates</a>
+          </li>
+          <li>
+            <a href="business-waste-collection.html">Business Waste Collection</a>
+          </li>
+          <li>
+            <a href="../services.html">All Services</a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <strong>Popular</strong>
+        <ul>
+          <li><a id="" href="../index.html">Home</a></li>
+          <li><a id="" href="../your-waste.html">Your Waste</a></li>
+          <li><a id="" href="../sectors.html">Sectors</a></li>
+          <li><a id="" href="../free-items.html">Free Items</a></li>
+          <li><a id="" href="../services.html">Services</a></li>
+          <li><a id="" href="../location.html">Location</a></li>
+          <li><a id="" href="../news.html">News</a></li>
+          <li><a id="" href="../contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>  
+  
+
+
+  </main>
+</body>
+<script src="../your-waste-contents/your-waste-script.js"></script> 
+<script src="../payment.js"></script>
+</html>

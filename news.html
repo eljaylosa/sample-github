@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>News</title>
+  <link rel="icon" type="image/x-icon" href="img/img/wecollect-web-icon.svg">
+  <link rel="stylesheet" href="css/nav-style.css">
+</head>
+<style>
+   /* navlinks fx */
+   .nav-links #news {
+      color: #1f4127;
+    }
+    .nav-links #news:hover {
+      color: #00f811;
+    }
+
+     /*body/bg section*/
+     .first-section {
+    margin: 30px 0;
+    display: flex;
+  }
+  .home-bg {
+    margin-top: 100px;
+    display: flex;
+    justify-content: baseline;
+  }
+
+
+  /*main-title section*/
+  .title-container {
+    margin: 20px 80px;
+    width: 50%;
+  }
+  .main-title h1 {
+    font-size: 50px;
+    color: #2e8b57; 
+  }
+  .sub-text p,
+  .sub-text2 p,
+  .sub-text3 p {
+  color: #3a5f47; 
+  font-weight: 500;
+  font-size: x-large;
+}
+  .sub-text3 p {
+    font-size: xx-large;
+  }
+
+
+  /*form section*/
+  .form-container {
+    border-radius: 10px;
+    margin-left: 200px;
+    width: 400px;
+    background: linear-gradient(135deg, #f0fff0, #d0f0c0);
+    display: flex;
+    justify-content: center;
+  }
+  .form-container .form {
+    text-align: center;
+  }
+  .benefits {
+  margin: 5px 0;
+  display: flex;
+  flex-direction: column;
+}
+.benefits .row1,
+.benefits .row2 {
+  display: flex;
+  justify-content: space-evenly;
+}
+.benefits p {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1em;
+  color: #2e5939; 
+  font-weight: 500;
+}
+.benefits p::before {
+  content: '✔️';
+  color: #00eb66; 
+  font-size: 1em;
+}
+ .inputs div input, textarea {
+  width: 100%;
+  padding: 12px 15px;
+  margin: 10px 0;
+  border: 1px solid #a3c9a8;        
+  border-radius: 8px;
+  background-color: #f5fff5;       
+  font-size: 1em;
+  color: #2e5939;                   
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+ }
+.inputs input:focus,
+.inputs textarea:focus {
+  border-color: #2e8b57;            
+  box-shadow: 0 0 5px rgba(46, 139, 87, 0.4);
+}
+ .inputs div input, textarea, .btn1 {
+  margin: 10px;
+  padding: 10px 5px;
+  width: 350px;
+ }
+ .inputs .btn-container1 .btn1 {
+  padding: 14px 30px;
+  background: linear-gradient(135deg, #4CAF50, #81C784); /* soft green gradient */
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 40px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 12px rgba(76, 175, 80, 0.4);
+  position: relative;
+  overflow: hidden;
+ } 
+ .inputs .btn-container1 .btn1::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  transition: left 0.4s ease;
+}
+
+.inputs .btn-container1 .btn1:hover::before {
+  left: 100%;
+}
+
+.inputs .btn-container1 .btn1:hover {
+  background: linear-gradient(135deg, #388E3C, #66BB6A);
+  transform: scale(1.06);
+  box-shadow: 0 8px 16px rgba(56, 142, 60, 0.5);
+}
+
+.inputs .btn-container1 .btn1::after {
+  content: " 🍃";
+  font-size: 20px;
+  margin-left: 8px;
+}
+
+/*news*/
+.news {
+  margin-top: 50px;
+  padding: 40px;
+  background-color: #fff;
+}
+
+.news h1 {
+  font-size: 2.5em;
+  margin-bottom: 30px;
+}
+
+.news-container {
+  margin: 50px 20px;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.news-card {
+  width: 48%;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #f9f9f9;
+  transition: transform 0.3s ease;
+}
+
+.news-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  filter: grayscale(80%) contrast(1.1);
+  transition: transform 0.4s ease;
+}
+
+.news-card:hover img {
+  transform: scale(1.05);
+}
+
+.news-card:hover {
+  cursor: pointer;
+  transform: translateY(-5px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.news-card .content {
+  padding: 15px;
+}
+
+.news .date {
+  font-size: 0.9em;
+  color: #555;
+}
+
+.news .title {
+  font-size: 1.2em;
+  margin: 8px 0;
+  font-weight: bold;
+}
+
+.news .description {
+  font-size: 0.95em;
+  color: #333;
+}
+
+.button-container {
+  text-align: center;
+  margin-top: 25px;
+}
+
+.view-button {
+  padding: 12px 26px;
+  background-color: #ffffff;
+  color: #4CAF50;
+  font-size: 16px;
+  font-weight: 600;
+  border: 2px solid #4CAF50;
+  border-radius: 30px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.view-button::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 3px;
+  background-color: #4CAF50;
+  transition: width 0.3s ease, left 0.3s ease;
+}
+
+.view-button:hover {
+  background-color: #e8f5e9; /* very light green */
+  color: #388E3C;
+  transform: scale(1.03);
+  box-shadow: 0 6px 12px rgba(56, 142, 60, 0.2);
+}
+
+.view-button:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+.bottom {
+  text-align: center;
+}
+
+/* animation to right (subtext) */
+@keyframes slideRight {
+      from {
+        opacity: 0;
+        transform: translateX(-50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+      .main-title,
+      .sub-text,
+      .sub-text2,
+      .sub-text3 {
+        opacity: 0;
+        animation: slideRight 0.8s forwards;
+      }
+
+
+      .sub-text {
+        animation-delay: 0.2s;
+      }
+
+      .sub-text2 {
+        animation-delay: 0.6s;
+      }
+
+      .sub-text3 {
+        animation-delay: 1s;
+      }
+
+      /* animation to up (form) */
+      @keyframes slideUp {
+        from {
+          opacity: 0;
+          transform: translateY(50px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .form-container {
+        opacity: 0;
+        animation: slideUp 1s ease-out forwards;
+        animation-delay: .2s; /* delay to appear after sub-text3 */
+      }
+</style>
+<body>
+<main>
+  <div class="nav-bar-container">
+    <nav>
+      <div class="logo">
+        <a href="index.html"><img src="img/img/WeCollect-logo.svg" alt="logo"></a>
+      </div>
+        <div class="nav-links">
+          <ul>
+            <li><a id="" href="index.html">Home</a></li>
+            <li><a id="" href="your-waste.html">Your Waste</a></li>
+            <li><a id="" href="sectors.html">Sectors</a></li>
+            <li><a id="" href="free-items.html">Free Items</a></li>
+            <li><a id="" href="services.html">Services</a></li>
+            <li><a id="" href="location.html">Location</a></li>
+            <li><a id="news" href="news.html">News</a></li>
+            <li><a id="" href="contact.html">Contact</a></li>
+            <li><a id="logout" href="Login/LogIn-UI.html">Log Out</a></li>
+          </ul>
+        </div>
+    </nav>
+  </div>
+
+  <section class="first-section">
+    <div class="home-bg">
+      <div class="title-container">
+        <div class="main-title">
+          <h1>News</h1>
+        </div>
+
+        <div class="sub-text">
+          <p>
+            Say goodbye to waste worries with <em><span style="text-decoration: underline;">We Collect</span>. </em>
+            We offer hassle-free waste collection services designed 
+            to keep your home or business clean and contribute to a 
+            healthier environment.
+          </p>
+        
+        </div>
+
+        <div class="sub-text2">
+          <p>
+            We offer a comprehensive range of waste collection services, 
+            including residential pickup, 
+            commercial collection, recycling programs, special waste disposal, etc.
+          </p>
+        </div>
+
+        <div class="sub-text3">
+          <p>
+            Keeping Your Community <em><u>Clean</u> and <u>Healthy!</u></em>
+          </p>
+        </div>
+      </div>
+     
+      <div class="form-container">
+        <form id="requestForm" action="payment.html" class="form">
+          <h1>Request Waste Collection</h1>
+          <p>Collect any waste for all!</p>
+          <div class="benefits">
+            <div class="row1">
+              <p>Reliable Pickup</p>
+              <p>Affordable</p>
+            </div>
+            <div class="row2">
+              <p>Eco-Friendly</p>
+              <p>Convenient</p>
+            </div>
+          </div>
+          
+          <div class="inputs">
+            <div class="name">
+              <input type="text" placeholder="Your Name">
+            </div>
+            <div class="bus-name">
+              <input type="text" placeholder="Business Name">
+            </div>
+            <div class="phone">
+              <input type="tel" placeholder="Your Phone Number">
+            </div>
+            <div class="email">
+              <input type="email" placeholder="Your Email">
+            </div>
+            <div class="requirement">
+              <textarea name="" id="" cols="47" rows="6" placeholder="Your Requirement"></textarea>
+            </div>
+            <div class="btn-container1">
+              <button class="btn1">Submit Request</button>
+            </div>
+          </div>
+        </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="news">
+    <h1>Read our latest News</h1>
+  
+    <div class="news-container">
+        <div class="news-card">
+          <a href="https://www.pna.gov.ph/articles/1241146" target="_blank">
+            <img src="img/sample/1.png" alt="waste">
+          </a>
+          <div class="content">
+            <div class="date">2 May 2025</div>
+            <div class="title">How Much is a Waste Carrier’s Licence?</div>
+            <div class="description">
+              There’s a cost for a waste carrier’s licence to transport commercial waste. Find out how much a waste carrier’s licence is and other costs in this blog post.
+            </div>
+          </div>
+        </div>
+  
+      <div class="news-card">
+        <a href="https://th.boell.org/en/2025/01/20/philippines-reducing-plastic-waste" target="_blank">
+          <img src="img/sample/2.png" alt="Plastic Waste in the Philippines">
+        </a>
+        <div class="content">
+          <div class="date">20 January 2025</div>
+          <div class="title">Philippines: Reducing Plastic Waste Isn't in the Bag — Yet</div>
+          <div class="description">
+            The Philippines generates approximately 2.7 million tonnes of plastic waste annually, with a significant portion ending up in the ocean. Despite existing regulations, challenges persist in effectively managing plastic waste. This article explores the current state of plastic pollution in the country and the efforts needed to address it.
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="news-container">
+      <div class="news-card">
+        <a href="https://www.undp.org/philippines/press-releases/philippines-launches-national-plastic-action-partnership-tackle-plastic-waste-and-advance-circular-economy" target="_blank">
+          <img src="img/sample/3.jpeg" alt="News Image">
+        </a>
+        <div class="content">
+          <div class="date">9 March 2025</div>
+          <div class="title">National Plastic Action Partnership Launched</div>
+          <div class="description">DENR launched NPAP to combat plastic waste and support a circular economy in the Philippines.</div>
+        </div>
+      </div>
+  
+      <div class="news-card">
+        <a href="https://www.philstar.com/nation/2025/01/06/2412272/manila-has-p561-million-unpaid-debts-garbage-collection-waste-firm-says" target="_blank">
+          <img src="img/sample/4.jpg" alt="Plastic Waste in the Philippines">
+        </a>
+        <div class="content">
+          <div class="date">20 January 2025</div>
+          <div class="title">Philippines: Reducing Plastic Waste Isn't in the Bag — Yet</div>
+          <div class="description">
+            The Philippines generates approximately 2.7 million tonnes of plastic waste annually, with a significant portion ending up in the ocean. Despite existing regulations, challenges persist in effectively managing plastic waste. This article explores the current state of plastic pollution in the country and the efforts needed to address it.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="news-container">
+      <div class="news-card">
+        <a href="https://www.eco-business.com/news/philippines-zero-waste-bid-relies-on-informal-workers/" target="_blank"> 
+          <img src="img/sample/5.png" alt="">
+        </a>
+        <div class="content">
+          <div class="date">January 2025</div>
+          <div class="title">Zero-Waste Goal Rests on Informal Workers</div>
+          <div class="description">
+            The Philippines' zero-waste effort depends on underprotected informal workers.
+          </div>
+        </div>
+      </div>
+  
+      <div class="news-card">
+        <a href="https://newsinfo.inquirer.net/2021216/91-trucks-collecting-four-fold-post-holiday-manila-waste-lacuna-assures" target="_blank"> 
+          <img src="img/sample/6.png" alt="">
+        </a>
+        <div class="content">
+          <div class="date">4 January 2025</div>
+          <div class="title">91 Trucks Deployed for Holiday Waste Surge</div>
+          <div class="description">
+            Mayor Lacuna assures public of efforts to clear post-holiday waste in Manila.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="news-container">
+      <div class="news-card">
+        <a href="https://www.pna.gov.ph/articles/1242601" target="_blank"> 
+          <img src="img/sample/7.jpg" alt="">
+        </a>
+        <div class="content">
+          <div class="date">February 2025</div>
+          <div class="title">MMDA Holds Expo for Sustainable Waste Solutions</div>
+          <div class="description">
+            MMDA promotes green innovations in waste management through a public expo.
+          </div>
+        </div>
+      </div>
+  
+      <div class="news-card">
+        <a href="https://www.bworldonline.com/banking-finance/2025/01/10/645745/waste-and-repurposed-plastics/" target="_blank"> 
+          <img src="img/sample/8.jpg" alt="">
+        </a>
+        <div class="content">
+          <div class="date">10 January 2025</div>
+          <div class="title">Opinion: Repurposing Plastic Waste</div>
+          <div class="description">
+            Experts urge the country to repurpose the 61,000 tons of daily waste produced.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="news-container">
+      <div class="news-card">
+        <a href="https://www.philstar.com/business/2025/03/25/2430807/taxing-plastics-proposed-excise-tax-single-use-plastics" target="_blank"> 
+          <img src="img/sample/9.png" alt="">
+        </a>
+        <div class="content">
+          <div class="date">25 March 2025</div>
+          <div class="title">Excise Tax Proposed for Single-Use Plastics</div>
+          <div class="description">
+            New tax aims to reduce pollution and push eco-friendly alternatives.
+          </div>
+        </div>
+      </div>
+  
+      <div class="news-card">
+        <a href="https://www.pna.gov.ph/index.php/articles/1241044" target="_blank"> 
+          <img src="img/sample/10.jpg" alt="">
+        </a>
+        <div class="content">
+          <div class="date">5 January 2025</div>
+          <div class="title">City to Sue Waste Collector for Negligence</div>
+          <div class="description">
+            The city of Manila plans to take action against a contractor who failed to collect waste.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="news-container">
+      <div class="news-card">
+        <a href="https://www.pna.gov.ph/index.php/articles/1241887" target="_blank"> 
+          <img src="img/sample/11.jpg" alt="">
+        </a>
+        <div class="content">
+          <div class="date">January 2025</div>
+          <div class="title">91% of Manila Bay Trash Is Plastic</div>
+          <div class="description">
+            Hard and soft plastics dominate marine litter, says environmental group.
+          </div>
+        </div>
+      </div>
+  
+      <div class="news-card">
+        <a href="https://www.gmanetwork.com/news/topstories/metro/932139/garbage-piles-remain-uncollected-in-manila/story/" target="_blank"> 
+          <img src="img/sample/12.png" alt="">
+        </a>
+        <div class="content">
+          <div class="date">7 January 2025</div>
+          <div class="title">Garbage Crisis Persists in Manila</div>
+          <div class="description">
+            Residents concerned as garbage piles remain days after the holidays.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="news-container">
+      <div class="news-card">
+        <a href="https://manilastandard.net/news/314543021/over-6-truckloads-of-garbage-collected-after-ncr-revelry.html" target="_blank"> 
+          <img src="img/sample/13.jpg" alt="">
+        </a>
+        <div class="content">
+          <div class="date">January 2025</div>
+          <div class="title">New Year Waste Fills 6 Trucks in NCR</div>
+          <div class="description">
+            Environmentalists criticize the massive waste left after celebrations.
+          </div>
+        </div>
+      </div>
+  
+      <div class="news-card">
+        <a href="https://sustainability.chemlinked.com/news/philippines-senate-bills-to-ban-solid-waste-import" target="_blank"> 
+          <img src="img/sample/14.jpg" alt="">
+        </a>
+        <div class="content">
+          <div class="date">27 January 2025</div>
+          <div class="title">Senate Files Bills to Ban Solid Waste Import</div>
+          <div class="description">
+            Proposed legislation aims to stop foreign waste shipments to the country.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="news-container">
+      <div class="news-card">
+        <a href="https://www.pna.gov.ph/articles/1248762" target="_blank"> 
+          <img src="img/sample/15.jpg" alt="">
+        </a>
+        <div class="content">
+          <div class="date">April 2025</div>
+          <div class="title">Eco-Waste Fair Urges Recyclable Sales</div>
+          <div class="description">
+            Public invited to sell recyclables at EMB's eco-waste fair events.
+          </div>
+        </div>
+      </div>
+  
+      <div class="news-card">
+        <a href="https://main.pldt.com/article/pldt-smart-target-further-expansion-e-waste-program" target="_blank"> 
+          <img src="img/sample/16.jpg" alt="">
+        </a>
+        <div class="content">
+          <div class="date">March 2025</div>
+          <div class="title">PLDT, Smart Expand E-Waste Program</div>
+          <div class="description">
+            180 e-waste drop-off points opened across the country for old electronics.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="news-container">
+      <div class="news-card">
+        <a href="https://mb.com.ph/2025/1/2/garbage-left-behind-the-need-to-foster-a-culture-of-environmental-responsibility" target="_blank"> 
+          <img src="img/sample/17.jpg" alt="">
+        </a>
+        <div class="content">
+          <div class="date">2 January 2025</div>
+          <div class="title">Building a Culture of Environmental Responsibility</div>
+          <div class="description">
+            Editorial stresses long-term education and responsibility for waste issues.
+          </div>
+        </div>
+      </div>
+  
+      <div class="news-card">
+        <a href="https://www.linkedin.com/pulse/beyond-technology-policy-key-solving-philippines-plastic-avecilla-vd5ae" target="_blank"> 
+          <img src="img/sample/18.jpg" alt="">
+        </a>
+        <div class="content">
+          <div class="date">9 May 2025</div>
+          <div class="title">Behavior Change Is Key to Solving Waste</div>
+          <div class="description">
+            Experts argue that fixing the plastic crisis requires changes in public behavior.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="news-container">
+      <div class="news-card">
+        <a href="https://arowanaimpactcapital.com/beyond-plastic-how-the-philippines-can-recycle-campaign-posters-after-the-2025-elections/" target="_blank"> 
+          <img src="img/sample/19.png" alt="">
+        </a>
+        <div class="content">
+          <div class="date">14 May 2025</div>
+          <div class="title">Recycling Election Posters in 2025</div>
+          <div class="description">
+            Post-election cleanup includes recycling materials like tarpaulin and paper ads.
+          </div>
+        </div>
+      </div>
+  
+      <div class="news-card">
+        <a href="https://en.wikipedia.org/wiki/Rehabilitation_of_the_Pasig_River" target="_blank"> 
+          <img src="img/sample/20.JPG" alt="">
+        </a>
+        <div class="content">
+          <div class="date">February 2025</div>
+          <div class="title">Pasig River Rehab: Waste Management Focus</div>
+          <div class="description">
+            A major urban renewal project centers on cleaning and restoring Pasig River.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <p class="bottom">You reached the bottom</p>
+
+  </section>
+  
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="logo-content">
+        <a href="index.html"><img src="img/img/WeCollect-logo.svg" alt="logo" class="logo-img"></a>
+        <p>123-456-789</p>
+      </div>
+      <div class="footer-links-container">
+        <div class="message">
+          <p>
+            We Collect offers reliable and eco-friendly waste collection services. From household to commercial waste, we help keep communities clean while promoting sustainability.
+            </p>
+        </div>
+        <div class="footer-wastetypes">
+          <strong>Waste Types</strong>
+          <ul class="waste-types">
+            <li>
+              <a href="your-waste-contents/cardboard -waste.html">Cardboard Waste</a>
+            </li>
+            <li>
+              <a href="your-waste-contents/clinical-waste.html">Clinical Waste</a>
+            </li>
+            <li>
+              <a href="your-waste-contents/confidential-waste.html">Confidential Waste</a>
+            </li>
+            <li>
+              <a href="your-waste-contents/dry-mixed-recycling.html">Dry Mixed Recycling</a>
+            </li>
+            <li>
+              <a href="your-waste-contents/general-waste.html">General Waste</a>
+            </li>
+            <li>
+              <a href="your-waste-contents/glass-waste.html">Glass Waste</a>
+            </li>
+            <li>
+              <a href="your-waste-contents/plastic-waste.html">Plastic Waste</a>
+            </li>
+            <li>
+              <a href="your-waste.html">All Waste</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-sectors">
+          <strong>Sectors</strong>
+          <ul class="sectors">
+            <li>
+              <a href="sectors-contents/healthcare.html">Healthcare</a>
+            </li>
+            <li>
+              <a href="sectors-contents/education.html">Education</a>
+            </li>
+            <li>
+              <a href="sectors-contents/retail.html">Retail</a>
+            </li>
+            <li>
+              <a href="sectors-contents/hospitality.html">Hospitality</a>
+            </li>
+            <li>
+              <a href="sectors-contents/offices.html">Offices</a>
+            </li>
+            <li>
+              <a href="sectors-contents/construction.html">Construction</a>
+            </li>
+            <li>
+              <a href="sectors-contents/transportation.html">Transfortation & Logistics</a>
+            </li>
+            <li>
+              <a href="sectors-contents/factories.html">Factories & Manufacturing</a>
+            </li>
+            <li>
+              <a href="sectors.html">All Sectors</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-services">
+          <strong>Services</strong>
+          <ul class="services">
+            <li>
+              <a href="services-contents/waste-collection.html">Waste Collection</a>
+            </li>
+            <li>
+              <a href="services-contents/waste-consultant.html">Waste Consultant</a>
+            </li>
+            <li>
+              <a href="services-contents/waste-management-plan.html">Waste Management</a>
+            </li>
+            <li>
+              <a href="services-contents/waste-audit.html">Waste Audit</a>
+            </li>
+            <li>
+              <a href="services-contents/waste-management-plan.html">Waste Management Plan</a>
+            </li>
+            <li>
+              <a href="services-contents/waste-disposal.html">Waste Disposal</a>
+            </li>
+            <li>
+              <a href="services-contents/commercial-recycling.html">Commercial Recycling</a>
+            </li>
+            <li>
+              <a href="services-contents/recycling-rebates.html">Recycling Rebates</a>
+            </li>
+            <li>
+              <a href="services-contents/business-waste-collection.html">Business Waste Collection</a>
+            </li>
+            <li>
+              <a href="services.html">All Services</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <strong>Popular</strong>
+          <ul>
+            <li><a id="" href="index.html">Home</a></li>
+            <li><a id="" href="your-waste.html">Your Waste</a></li>
+            <li><a id="" href="sectors.html">Sectors</a></li>
+            <li><a id="" href="free-items.html">Free Items</a></li>
+            <li><a id="" href="services.html">Services</a></li>
+            <li><a id="" href="location.html">Location</a></li>
+            <li><a id="" href="news.html">News</a></li>
+            <li><a id="" href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+</main>
+</body>
+<script src="payment.js"></script> 
+</html>

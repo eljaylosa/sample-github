@@ -1,0 +1,1213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/57a739b7d7.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="css/nav-style.css">
+  <link rel="icon" type="image/x-icon" href="img/img/wecollect-web-icon.svg">
+  <title>We Collect</title>
+</head>
+<!-- Form Cantainer and footer next to design then move to next page (your waste) -->
+ <!-- Next will be Your Waste Page Lets gaw! -->
+  <!-- Contact next les gaw! -->
+   
+  <!-- your waste contents lesgaw also gagawa ako ng payment after mag submit request there will be a page 
+   where you can pay maybe a QR code then when scanned, it 
+   will message "thanks for requesting shit" then redirect to home, also wala munang real payment na mangyayari hehe -->
+
+   <!-- then gagawa ng pages yung sectors and services then lalagyan ng laman yung sectors and free items-->
+    <!-- Currently thinking of design for free items, lets just look forward to it!! Let me Cook!! -->
+<!-- tapusin nalang yung services and descriptons each them we can now move to sectors and free items sheesh (madali nalang yung services) -->
+ <!-- then yung sa payment -->
+  <!-- also pala lalagyan ko ng animations, parang lalabas yung mga elements and shit para di mukhang plain tignan -->
+   <!-- yung payment na then yung links ng mga news, ewan ko lang kung maglalaagy pa ng img bawat waste types e -->
+    <!-- nilagyan ko narin pala ng login/signup para mukha talaga syang wibsite -->
+<style>
+  /* navlinks fx */
+    .nav-links #index {
+      color: #1f4127;
+    }
+    .nav-links #index:hover {
+      color: #00f811;
+    }
+   /*body/bg section*/
+  .first-section {
+    margin: 30px 0;
+    display: flex;
+  }
+  .home-bg {
+    margin-top: 100px;
+    display: flex;
+    justify-content: baseline;
+  }
+
+
+  /*main-title section*/
+  .title-container {
+    margin: 20px 80px;
+    width: 50%;
+  }
+  .main-title h1 {
+    font-size: 50px;
+    color: #2e8b57; 
+  }
+  .sub-text p,
+  .sub-text2 p,
+  .sub-text3 p {
+  color: #3a5f47; 
+  font-weight: 500;
+  font-size: x-large;
+}
+  .sub-text3 p {
+    font-size: xx-large;
+  }
+.main-title span {
+  text-decoration: underline;
+
+}
+
+  /*form section*/
+  .form-container {
+    border-radius: 10px;
+    margin-left: 200px;
+    width: 400px;
+    background: linear-gradient(135deg, #f0fff0, #d0f0c0);
+    display: flex;
+    justify-content: center;
+  }
+  .form-container .form {
+    text-align: center;
+  }
+  .benefits {
+  margin: 5px 0;
+  display: flex;
+  flex-direction: column;
+}
+.benefits .row1,
+.benefits .row2 {
+  display: flex;
+  justify-content: space-evenly;
+}
+.benefits p {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1em;
+  color: #2e5939; 
+  font-weight: 500;
+}
+.benefits p::before {
+  content: '✔️';
+  color: #00eb66; 
+  font-size: 1em;
+}
+ .inputs div input, textarea {
+  width: 100%;
+  padding: 12px 15px;
+  margin: 10px 0;
+  border: 1px solid #a3c9a8;        
+  border-radius: 8px;
+  background-color: #f5fff5;       
+  font-size: 1em;
+  color: #2e5939;                   
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+ }
+.inputs input:focus,
+.inputs textarea:focus {
+  border-color: #2e8b57;            
+  box-shadow: 0 0 5px rgba(46, 139, 87, 0.4);
+}
+ .inputs div input, textarea, .btn1 {
+  margin: 10px;
+  padding: 10px 5px;
+  width: 350px;
+ }
+ .inputs .btn-container1 .btn1 {
+  padding: 14px 30px;
+  background: linear-gradient(135deg, #4CAF50, #81C784); /* soft green gradient */
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 40px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 12px rgba(76, 175, 80, 0.4);
+  position: relative;
+  overflow: hidden;
+ } 
+ .inputs .btn-container1 .btn1::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  transition: left 0.4s ease;
+}
+
+.inputs .btn-container1 .btn1:hover::before {
+  left: 100%;
+}
+
+.inputs .btn-container1 .btn1:hover {
+  background: linear-gradient(135deg, #388E3C, #66BB6A);
+  transform: scale(1.06);
+  box-shadow: 0 8px 16px rgba(56, 142, 60, 0.5);
+}
+
+.inputs .btn-container1 .btn1::after {
+  content: " 🍃";
+  font-size: 20px;
+  margin-left: 8px;
+}
+
+
+ /*section 2*/
+ .second-section {
+  background: linear-gradient(to bottom right, #dcedc8, #a5d6a7); /* soft nature gradient */
+  background-image: url('https://www.transparenttextures.com/patterns/leaf.png'); /* subtle leaf texture */
+  background-repeat: repeat;
+  box-shadow: inset 0 0 15px rgba(76, 175, 80, 0.4); /* soft green inner shadow */
+  margin-top: 120px;
+  padding: 60px 40px;
+  border-radius: 20px;
+  color: #2e7d32;
+  font-family: 'Segoe UI', sans-serif;
+ }
+ .title-container2 h1 {
+  margin: 0 80px;
+  font-size: xx-large;
+ }
+ .box-container {
+  display: flex;
+  justify-content: center;
+ }
+ .box-container .row{
+  margin: 40px 20px;
+  display: flex;
+ }
+.box {
+  text-align: center;
+  background-color: #f1f8f4; /* soft greenish background */
+  border: 2px solid #c8e6c9;
+  border-radius: 20px;
+  padding: 20px 25px;
+  box-shadow: 0 6px 12px rgba(76, 175, 80, 0.2);
+  transition: all 0.3s ease;
+  max-width: 700px;
+  width: 350px;
+  margin: 20px 30px;
+  color: #2e7d32;
+  font-family: 'Segoe UI', sans-serif;
+}
+.box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 18px rgba(56, 142, 60, 0.3);
+  background-color: #e8f5e9;
+}
+.logo2 {
+  margin: 0;
+  text-align: center;
+  justify-content: center;
+}
+.logo2 i {
+  font-size: 100px;
+}
+.box-title h3 {
+  font-size: xx-large;
+}
+.btn-container2 .btn2 {
+  padding: 12px 25px;
+  background-color: #4CAF50; /* natural green */
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 10px rgba(76, 175, 80, 0.3);
+}
+
+.btn-container2 .btn2:hover {
+  background-color: #388E3C; /* darker green on hover */
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(56, 142, 60, 0.5);
+}
+
+.btn-container {
+  text-align: center;
+}
+.btn-container button {
+  padding: 20px;
+  background-color: #2e8b57;   /* Forest green */
+  color: #fff;
+  border: none;
+  padding: 12px 30px;
+  font-size: 1em;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 10px rgba(46, 139, 87, 0.3);
+}
+.btn-container button::after {
+  content: '→'; 
+  position: absolute;
+  right: 10px;
+  align-items: center;
+  transition: transform 0.3s ease;
+  font-size: 1em;
+}
+.btn-container button:hover {
+  background-color: #3cb371;   /* Medium sea green */
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(60, 179, 113, 0.4);
+}
+.btn-container button:hover::after {
+  transform: translateX(5px);
+}
+
+
+
+/*section 3*/
+ .third-section {
+  padding: 20px;
+  display: flex;
+ }
+ .third-section .title-container3{
+  margin: 0 80px;
+  width: 50%;
+ }
+ .third-section .title-container3 h1 {
+  font-size: xx-large;
+  text-align: left;
+ }
+ .third-section .title-container3 p {
+  font-size: x-large;
+  text-align: justify;
+ }
+ .third-section .title-container3 button {
+  margin-top: 40px;
+  padding: 12px 40px;
+  background: rgba(76, 175, 80, 0.8); /* semi-transparent green */
+  color: #fff;
+  font-size: 17px;
+  font-weight: 600;
+  border: 2px solid #4CAF50;
+  border-radius: 50px;
+  backdrop-filter: blur(5px);
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(76, 175, 80, 0.3);
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.third-section .title-container3 button:hover {
+  background: rgba(56, 142, 60, 0.95); /* deeper green on hover */
+  transform: translateY(-3px);
+  box-shadow: 0 8px 18px rgba(56, 142, 60, 0.4);
+}
+
+.third-section .title-container3 button::after {
+  content: "🌿";
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+  opacity: 0.6;
+  pointer-events: none;
+}
+.pic-container {
+  width: 50%;
+  padding: 20px;
+}
+.pic-container img {
+  align-self: center;
+  height: 100%;
+  width: 100%;
+  border-radius: 100px 0px 0px 100px;
+  transition: .5s;
+}
+.pic-container:hover img {
+  cursor: pointer;
+  transform: translateY(-5px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.pic-container img:hover {
+  transform: scale(1.01);
+}
+
+
+ /*news*/
+ .news {
+  margin-top: 50px;
+  padding: 40px;
+  background-color: #fff;
+}
+
+.news h1 {
+  font-size: 2.5em;
+  margin-bottom: 30px;
+}
+
+.news-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.news-card {
+  width: 48%;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #f9f9f9;
+  transition: transform 0.3s ease;
+}
+
+.news-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  filter: grayscale(80%) contrast(1.1);
+  transition: transform 0.4s ease;
+}
+
+.news-card:hover img {
+  transform: scale(1.05);
+}
+
+.news-card:hover {
+  cursor: pointer;
+  transform: translateY(-5px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.news-card .content {
+  padding: 15px;
+}
+
+.news .date {
+  font-size: 0.9em;
+  color: #555;
+}
+
+.news .title {
+  font-size: 1.2em;
+  margin: 8px 0;
+  font-weight: bold;
+}
+
+.news .description {
+  font-size: 0.95em;
+  color: #333;
+}
+
+.button-container {
+  text-align: center;
+  margin-top: 25px;
+}
+
+.view-button {
+  padding: 12px 26px;
+  background-color: #ffffff;
+  color: #4CAF50;
+  font-size: 16px;
+  font-weight: 600;
+  border: 2px solid #4CAF50;
+  border-radius: 30px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.view-button::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 3px;
+  background-color: #4CAF50;
+  transition: width 0.3s ease, left 0.3s ease;
+}
+
+.view-button:hover {
+  background-color: #e8f5e9; /* very light green */
+  color: #388E3C;
+  transform: scale(1.03);
+  box-shadow: 0 6px 12px rgba(56, 142, 60, 0.2);
+}
+
+.view-button:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+/* sector */
+.sector {
+  background: linear-gradient(to right, #e8f5e9, #c8e6c9);
+  padding: 60px 20px;
+  font-family: 'Segoe UI', sans-serif;
+  color: #2e7d32;
+  width: 100%;
+}
+
+.sector-container {
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+  
+}
+
+.sector h2 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+.intro {
+  font-size: 1.1em;
+  margin-bottom: 40px;
+  max-width: 800px;
+  margin-inline: auto;
+}
+
+.sector-grid {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+}
+
+.sector-grid a {
+  text-decoration: none;
+  color: #2e7d32;
+}
+
+
+.sector-card {
+  background: #ffffff;
+  border-left: 6px solid #66bb6a;
+  border-radius: 10px;
+  padding: 25px 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+  height: 200px;
+  text-decoration: none;
+}
+i {
+  font-size: 50px;
+}
+.sector-card:hover {
+  cursor: pointer;
+}
+
+.sector-card:hover {
+  transform: translateY(-5px);
+}
+
+.sector-card h3 {
+  margin-bottom: 10px;
+  color: #388e3c;
+}
+
+.cta {
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.cta button {
+  margin: 0 10px;
+  background-color: #388e3c;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 25px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.cta button:hover {
+  background-color: #2e7d32;
+}
+
+
+/* free-items */
+.free-items {
+  background: linear-gradient(to bottom right, #e9f7ef, #d4efdf);
+  padding: 200px 30px;
+  text-align: center;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 80, 0, 0.1);
+}
+
+.free-items h2 {
+  font-size: 2.2rem;
+  color: #2e7d32;
+  margin-bottom: 10px;
+}
+
+.free-items p {
+  font-size: 1rem;
+  color: #388e3c;
+  margin-bottom: 30px;
+}
+
+.items-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+}
+
+.item-card {
+  background: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 4px 10px rgba(0, 60, 0, 0.1);
+  width: 220px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+
+.item-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 14px rgba(0, 90, 0, 0.2);
+}
+
+.item-card img {
+  width: 100%;
+  height: 140px;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+
+.item-card h3 {
+  color: #1b5e20;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+.item-card p {
+  font-size: 0.95rem;
+  color: #2e7d32;
+}
+
+.item-card a {
+  color: #2e7d32;
+}
+
+.item-card p strong {
+  color: #1b5e20;
+}
+
+.label {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background-color: #a5d6a7;
+  color: #1b5e20;
+  padding: 5px 10px;
+  font-size: 0.75rem;
+  border-radius: 12px;
+  font-weight: bold;
+}
+.note {
+  margin-top: 30px;
+}
+.note button  {
+  margin: 0 10px;
+  padding: 20px;
+  background-color: #2e8b57;   /* Forest green */
+  color: #fff;
+  border: none;
+  padding: 12px 30px;
+  font-size: 1em;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 10px rgba(46, 139, 87, 0.3);
+}
+.note button::after {
+  content: '↑'; 
+  position: absolute;
+  right: 15px;
+  align-items: center;
+  transition: transform 0.2s ease-in-out;
+  font-size: 1em;
+}
+
+.note button:hover {
+  background-color: #3cb371;   /* Medium sea green */
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(60, 179, 113, 0.4);
+}
+.note button:hover::after {
+  transform: translateY(-5px);
+}
+
+.note #btn-arrow::after {
+  content: '→'; 
+  position: absolute;
+  right: 15px;
+  align-items: center;
+  transition: transform 0.2s ease-in-out;
+  font-size: 1em;
+}
+
+.note #btn-arrow:hover {
+  background-color: #3cb371;   /* Medium sea green */
+  transform: translateX(-2px);
+  box-shadow: 0 6px 12px rgba(60, 179, 113, 0.4);
+}
+
+.note #btn-arrow:hover::after {
+  transform: translateX(5px);
+}
+
+/*location*/
+.location {
+      max-width: 50%;
+      margin: auto;
+      background-color: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+      margin-bottom: 100px;
+    }
+
+    .location-header {
+      margin-top: 210px;
+      padding: 20px;
+      background-color: #2e7d32;
+      color: white;
+      text-align: center;
+      border-bottom: 3px solid #1b5e20;
+    }
+
+    .location-header h2 {
+      font-size: 1.8rem;
+      margin-bottom: 5px;
+    }
+
+    .map-container {
+      width: 100%;
+      height: 450px;
+      border: none;
+    }
+
+    @media (max-width: 600px) {
+      .map-container {
+        height: 300px;
+      }
+    }
+
+/* form highlight */
+#contact-form {
+      scroll-margin-top: 200px;
+      transition: border 0.3s, box-shadow 0.3s;
+    }
+
+    #contact-form.highlight {
+      animation: highlightGlow 1s ease-in-out;
+      border: 2px solid #4CAF50;
+      box-shadow: 0 0 15px #4CAF50;
+      
+    }
+    @keyframes highlightGlow {
+      0% { box-shadow: 0 0 0px #4CAF50; }
+      50% { box-shadow: 0 0 15px #4CAF50; }
+      100% { box-shadow: 0 0 0px #4CAF50; }
+    }
+
+    .services-btn {
+      text-align: center;
+      margin-top: 70px;
+    }
+    .services-btn button {
+      padding: 12px 26px;
+      background-color: #ffffff;
+      color: #4CAF50;
+      font-size: 16px;
+      font-weight: 600;
+      border: 2px solid #4CAF50;
+      border-radius: 30px;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+
+    .services-btn button:hover {
+      background-color: #e8f5e9; /* very light green */
+      color: #388E3C;
+      transform: scale(1.03);
+      box-shadow: 0 6px 12px rgba(56, 142, 60, 0.2);
+      background-color: #4CAF50 ;
+      color: #ffffff;
+    }
+
+    /* animation to right (subtext) */
+        @keyframes slideRight {
+      from {
+        opacity: 0;
+        transform: translateX(-50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+      .main-title,
+      .sub-text,
+      .sub-text2,
+      .sub-text3 {
+        opacity: 0;
+        animation: slideRight 0.8s forwards;
+      }
+
+
+      .sub-text {
+        animation-delay: 0.2s;
+      }
+
+      .sub-text2 {
+        animation-delay: 0.6s;
+      }
+
+      .sub-text3 {
+        animation-delay: 1s;
+      }
+
+
+</style>
+
+<body>
+  <main>
+    <div class="nav-bar-container">
+      <nav>
+        <div class="logo">
+          <a href="index.html"><img src="img/img/WeCollect-logo.svg" alt="logo"></a>
+        </div>
+          <div class="nav-links">
+            <ul>
+              <li><a id="index" href="index.html">Home</a></li>
+              <li><a id="" href="your-waste.html">Your Waste</a></li>
+              <li><a id="" href="sectors.html">Sectors</a></li>
+              <li><a id="" href="free-items.html">Free Items</a></li>
+              <li><a id="" href="services.html">Services</a></li>
+              <li><a id="" href="location.html">Location</a></li>
+              <li><a id="" href="news.html">News</a></li>
+              <li><a id="" href="contact.html">Contact</a></li>
+              <li><a id="logout" href="Login/LogIn-UI.html">Log Out</a></li>
+            </ul>
+          </div>
+      </nav>
+    </div>
+
+    <section class="first-section">
+      <div class="home-bg">
+        <div class="title-container">
+          <div class="main-title">
+            <h1>We <span><i>Collect</i></span></h1>
+          </div>
+  
+          <div class="sub-text">
+            <p>
+              Say goodbye to waste worries with <em><span style="text-decoration: underline;">We Collect</span>. </em>
+              We offer hassle-free waste collection services designed 
+              to keep your home or business clean and contribute to a 
+              healthier environment.
+            </p>
+          
+          </div>
+
+          <div class="sub-text2">
+            <p>
+              We offer a comprehensive range of waste collection services, 
+              including residential pickup, 
+              commercial collection, recycling programs, special waste disposal, etc.
+            </p>
+          </div>
+
+          <div class="sub-text3">
+            <p>
+              Keeping Your Community <em><u>Clean</u> and <u>Healthy!</u></em>
+            </p>
+          </div>
+        </div>
+       
+        <div class="form-container" id="contact-form">
+          <form id="requestForm" action="payment.html" class="form">
+            <h1>Request Waste Collection</h1>
+            <p>Collect any waste for all!</p>
+            
+            <div class="benefits">
+              <div class="row1">
+                <p>Reliable Pickup</p>
+                <p>Affordable</p>
+              </div>
+              <div class="row2">
+                <p>Eco-Friendly</p>
+                <p>Convenient</p>
+              </div>
+            </div>
+          
+            <div class="inputs">
+              <div class="name">
+                <input type="text" placeholder="Your Name" id="nameInput">
+              </div>
+              <div class="bus-name">
+                <input type="text" placeholder="Business Name">
+              </div>
+              <div class="phone">
+                <input type="tel" placeholder="Your Phone Number">
+              </div>
+              <div class="email">
+                <input type="email" placeholder="Your Email">
+              </div>
+              <div class="requirement">
+                <textarea id="requirementInput" cols="47" rows="6" placeholder="Your Requirement"></textarea>
+              </div>
+              <div class="btn-container1">
+                <button class="btn1" type="submit">Submit Request</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="second-section">
+      <div class="title-container2">
+        <h1>Waste Management Services</h1>
+      </div>
+
+      <div class="box-container">
+        <div class="row">
+          <div class="box">
+            <div class="logo2">
+              <i class="fa-solid fa-truck"></i>
+            </div>
+            <div class="box-title">
+              <h3>Waste Collection</h3>
+            </div>
+            <div class="btn-container2">
+              <a href="services-contents/waste-collection.html"><button class="btn2">Waste Collection</button></a>
+            </div>
+          </div>
+
+          <div class="box">
+            <div class="logo2">
+              <i class="fa-solid fa-person"></i>  
+            </div>
+            <div class="box-title">
+              <h3>Waste Consultant</h3>
+            </div>
+            <div class="btn-container2">
+              <a href="services-contents/waste-consultant.html">><button class="btn2">Waste Consultant</button></a>
+            </div>
+          </div>
+
+          <div class="box">
+            <div class="logo2">
+              <i class="fa-solid fa-people-roof"></i>
+            </div>
+            <div class="box-title">
+              <h3>Waste Management</h3>
+            </div>
+            <div class="btn-container2">
+              <a href="services-contents/waste-management.html"><button class="btn2">Waste Management</button></a>
+            </div>
+          </div>
+        </div> 
+      </div>
+  
+
+      <div class="btn-container">
+        <a href="services.html"><button>View all services</button></a>
+      </div>
+
+    </section>
+
+    <section class="third-section">
+      <div class="title-container3">
+        <h1>Discover waste we collect</h1>
+        <p>
+          We handle a wide range of waste types to ensure proper disposal and recycling. From everyday general waste to specialized materials like clinical, confidential, and recyclable waste, our services are designed to meet both residential and commercial needs. Explore the categories of waste we collect and see how we contribute to a cleaner, safer, and more sustainable environment.
+        </p>
+        <a href="your-waste.html"><button>Discover your type of waste</button></a>
+      </div>
+      <div class="pic-container">
+        <img src="img/sample/1.png" alt="waste-pic">
+      </div> 
+    </section>
+
+    <section class="sector">
+      <div class="sector-container">
+        <h2>Industries We Serve</h2>
+        <p class="intro">
+          At <strong>We Collect</strong>, we offer sustainable waste management solutions tailored to various sectors. Our eco-friendly approach ensures efficient, safe, and reliable collection for every type of business.
+        </p>
+    
+        <div class="sector-grid">
+          <a href="sectors-contents/healthcare.html">
+            <div class="sector-card">
+              <i class="fa-solid fa-notes-medical"></i>
+              <h3>Healthcare</h3>
+              <p>Safe disposal of clinical, sharps, and hazardous waste in compliance with health regulations.</p>
+            </div>
+          </a>
+          
+          <a href="sectors-contents/education.html">
+            <div class="sector-card">
+              <i class="fa-solid fa-school"></i>
+              <h3>Education</h3>
+              <p>Comprehensive recycling and general waste management for schools and universities.</p>
+            </div>
+          </a>
+        
+          <a href="sectors-contents/retail.html">
+            <div class="sector-card">
+              <i class="fa-solid fa-bag-shopping"></i>
+              <h3>Retail</h3>
+              <p>Efficient collection of cardboard, packaging, and general retail waste.</p>
+            </div>
+          </a>
+          
+          <a href="sectors-contents/hospitality.html">
+            <div class="sector-card">
+              <i class="fa-solid fa-utensils"></i>
+              <h3>Hospitality</h3>
+              <p>Glass, food waste, and dry mixed recycling solutions for hotels and restaurants.</p>
+            </div>
+          </a>
+  
+      </div>
+      <div class="cta">
+        <a href="sectors.html"><button>See All Sectors</button></a>
+        <a href="contact.html"><button>Get in Touch</button></a>
+      </div>
+    </section>
+
+    <section class="free-items">
+      <h2>Want some free items?</h2>
+      <p>We provide free bins and bags to help you manage your waste efficiently.</p>
+      <div class="items-container">
+        <div class="item-card">
+          <img src="img/img/bins-size/trash-sizes/small-bin.svg" alt="Small Bin">
+          <h3>Small Bin</h3>
+          <p>Perfect for bathrooms or small offices.<br><strong>Ideal for:</strong> <a href="your-waste-contents/general-waste.html">General Waste</a>, <a href="your-waste-contents/dry-mixed-recycling.html">Dry-Mixed Recycling</a></p>
+          <span class="label">15L</span>
+        </div>
+        <div class="item-card">
+          <img src="img/img/bins-size/trash-sizes/large bin.svg" alt="Large Bin">
+          <h3>Large Bin</h3>
+          <p>Perfect for commercial or outdoor use.<br><strong>Ideal for:</strong> <a href="your-waste-contents/clinical-waste.html">Clinical Waste</a>, <a href="your-waste-contents/clinical-waste.html">Glass Waste</a>, <a href="your-waste-contents/general-waste.html">General Waste</a></p>
+          <span class="label">60L</span>
+        </div>
+        <div class="item-card">
+          <img src="img/img/bins-size/trash-sizes/large-bag.svg" alt="Large Bag">
+          <h3>Large Bag</h3>
+          <p>Great for bulk or garden waste.<br><strong>Ideal for:</strong> <a href="your-waste-contents/cardboard -waste.html">Cardboard</a>, <a href="your-waste-contents/plastic-waste.html">Plastic Waste</a>, <a href="your-waste-contents/general-waste.html">General Waste</a></p>
+          <span class="label">50L</span>
+        </div>
+      </div>
+  
+      <div class="note">
+        <a href="#"><button class="btn" onclick="highlightForm()">Collect your wastes now!</button></a>
+        <a href="free-items.html"><button class="btn" id="btn-arrow">See all free items</button></a>
+      </div>
+    </section>  
+
+    <section class="location">
+      <div class="location-header">
+        <h2>Where we collect</h2>
+        <p>Find our office location on the map below</p>
+      </div>
+      <iframe 
+        class="map-container"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3859.6301065479734!2d120.52805751173345!3d14.676920985759336!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x339640000f390aad%3A0x282a05eee202e317!2sBataan%20Peninsula%20State%20University!5e0!3m2!1sen!2sph!4v1746971442035!5m2!1sen!2sph" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" 
+        loading="lazy">
+      </iframe>
+    </section>
+
+    <section class="news">
+      <h1>Read our latest News</h1>
+    
+      <div class="news-container">
+        <div class="news-card">
+          <a href="https://www.pna.gov.ph/articles/1241146" target="_blank">
+            <img src="img/sample/1.png" alt="waste">
+          </a>
+          <div class="content">
+            <div class="date">2 May 2025</div>
+            <div class="title">How Much is a Waste Carrier’s Licence?</div>
+            <div class="description">
+              There’s a cost for a waste carrier’s licence to transport commercial waste. Find out how much a waste carrier’s licence is and other costs in this blog post.
+            </div>
+          </div>
+        </div>
+    
+        <div class="news-card">
+          <a href="https://th.boell.org/en/2025/01/20/philippines-reducing-plastic-waste" target="_blank">
+            <img src="img/sample/2.png" alt="Plastic Waste in the Philippines">
+          </a>
+          <div class="content">
+            <div class="date">20 January 2025</div>
+            <div class="title">Philippines: Reducing Plastic Waste Isn't in the Bag — Yet</div>
+            <div class="description">
+              The Philippines generates approximately 2.7 million tonnes of plastic waste annually, with a significant portion ending up in the ocean. Despite existing regulations, challenges persist in effectively managing plastic waste. This article explores the current state of plastic pollution in the country and the efforts needed to address it.
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      <div class="button-container">
+        <a href="news.html"><button class="view-button">View all news</button></a>
+      </div>
+    </section>
+
+
+
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="logo-content">
+          <a href="index.html"><img src="img/img/WeCollect-logo.svg" alt="logo" class="logo-img"></a>
+          <p>123-456-789</p>
+        </div>
+        <div class="footer-links-container">
+          <div class="message">
+            <p>
+              We Collect offers reliable and eco-friendly waste collection services. From household to commercial waste, we help keep communities clean while promoting sustainability.
+              </p>
+          </div>
+          <div class="footer-wastetypes">
+            <strong>Waste Types</strong>
+            <ul class="waste-types">
+              <li>
+                <a href="your-waste-contents/cardboard -waste.html">Cardboard Waste</a>
+              </li>
+              <li>
+                <a href="your-waste-contents/clinical-waste.html">Clinical Waste</a>
+              </li>
+              <li>
+                <a href="your-waste-contents/confidential-waste.html">Confidential Waste</a>
+              </li>
+              <li>
+                <a href="your-waste-contents/dry-mixed-recycling.html">Dry Mixed Recycling</a>
+              </li>
+              <li>
+                <a href="your-waste-contents/general-waste.html">General Waste</a>
+              </li>
+              <li>
+                <a href="your-waste-contents/glass-waste.html">Glass Waste</a>
+              </li>
+              <li>
+                <a href="your-waste-contents/plastic-waste.html">Plastic Waste</a>
+              </li>
+              <li>
+                <a href="your-waste.html">All Waste</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-sectors">
+            <strong>Sectors</strong>
+            <ul class="sectors">
+              <li>
+                <a href="sectors-contents/healthcare.html">Healthcare</a>
+              </li>
+              <li>
+                <a href="sectors-contents/education.html">Education</a>
+              </li>
+              <li>
+                <a href="sectors-contents/retail.html">Retail</a>
+              </li>
+              <li>
+                <a href="sectors-contents/hospitality.html">Hospitality</a>
+              </li>
+              <li>
+                <a href="sectors-contents/offices.html">Offices</a>
+              </li>
+              <li>
+                <a href="sectors-contents/construction.html">Construction</a>
+              </li>
+              <li>
+                <a href="sectors-contents/transportation.html">Transfortation & Logistics</a>
+              </li>
+              <li>
+                <a href="sectors-contents/factories.html">Factories & Manufacturing</a>
+              </li>
+              <li>
+                <a href="sectors.html">All Sectors</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-services">
+            <strong>Services</strong>
+            <ul class="services">
+              <li>
+                <a href="services-contents/waste-collection.html">Waste Collection</a>
+              </li>
+              <li>
+                <a href="services-contents/waste-consultant.html">Waste Consultant</a>
+              </li>
+              <li>
+                <a href="services-contents/waste-management-plan.html">Waste Management</a>
+              </li>
+              <li>
+                <a href="services-contents/waste-audit.html">Waste Audit</a>
+              </li>
+              <li>
+                <a href="services-contents/waste-management-plan.html">Waste Management Plan</a>
+              </li>
+              <li>
+                <a href="services-contents/waste-disposal.html">Waste Disposal</a>
+              </li>
+              <li>
+                <a href="services-contents/commercial-recycling.html">Commercial Recycling</a>
+              </li>
+              <li>
+                <a href="services-contents/recycling-rebates.html">Recycling Rebates</a>
+              </li>
+              <li>
+                <a href="services-contents/business-waste-collection.html">Business Waste Collection</a>
+              </li>
+              <li>
+                <a href="services.html">All Services</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-links">
+            <strong>Popular</strong>
+            <ul>
+              <li><a id="" href="index.html">Home</a></li>
+              <li><a id="" href="your-waste.html">Your Waste</a></li>
+              <li><a id="" href="sectors.html">Sectors</a></li>
+              <li><a id="" href="free-items.html">Free Items</a></li>
+              <li><a id="" href="services.html">Services</a></li>
+              <li><a id="" href="location.html">Location</a></li>
+              <li><a id="" href="news.html">News</a></li>
+              <li><a id="" href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </main>
+</body>
+<script src="your-waste-contents/your-waste-script.js"></script> 
+<script src="payment.js"></script> 
+</html>

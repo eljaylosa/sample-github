@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Location</title>
+  <link rel="icon" type="image/x-icon" href="img/img/wecollect-web-icon.svg">
+  <link rel="stylesheet" href="css/nav-style.css">
+</head>
+<style>
+
+    /* navlinks fx */
+    .nav-links #location {
+      color: #1f4127;
+    }
+    .nav-links #location:hover {
+      color: #00f811;
+    }
+
+body {
+  background-color: #e2e2e2;
+}
+
+/*location*/
+    .location {
+      max-width: 50%;
+      margin: auto;
+      background-color: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+      margin-bottom: 100px;
+    }
+
+    .location-header {
+      margin-top: 210px;
+      padding: 20px;
+      background-color: #2e7d32;
+      color: white;
+      text-align: center;
+      border-bottom: 3px solid #1b5e20;
+    }
+
+    .location-header h2 {
+      font-size: 1.8rem;
+      margin-bottom: 5px;
+    }
+
+    .map-container {
+      width: 100%;
+      height: 450px;
+      border: none;
+    }
+
+    @media (max-width: 600px) {
+      .map-container {
+        height: 300px;
+      }
+    }
+    
+    /* animation to up (form) */
+    @keyframes slideUp {
+        from {
+          opacity: 0;
+          transform: translateY(50px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .location {
+        opacity: 0;
+        animation: slideUp .5s ease-out forwards;
+        animation-delay: .2s; /* delay to appear after sub-text3 */
+      }
+</style>
+<body>
+<main>
+  <div class="nav-bar-container">
+    <nav>
+      <div class="logo">
+        <a href="index.html"><img src="img/img/WeCollect-logo.svg" alt="logo"></a>
+      </div>
+        <div class="nav-links">
+          <ul>
+            <li><a id="" href="index.html">Home</a></li>
+            <li><a id="" href="your-waste.html">Your Waste</a></li>
+            <li><a id="" href="sectors.html">Sectors</a></li>
+            <li><a id="" href="free-items.html">Free Items</a></li>
+            <li><a id="" href="services.html">Services</a></li>
+            <li><a id="location" href="location.html">Location</a></li>
+            <li><a id="" href="news.html">News</a></li>
+            <li><a id="" href="contact.html">Contact</a></li>
+            <li><a id="logout" href="Login/LogIn-UI.html">Log Out</a></li>
+          </ul>
+        </div>
+    </nav>
+  </div>
+
+  <section class="location">
+    <div class="location-header">
+      <h2>Where we collect</h2>
+      <p>Find our office location on the map below</p>
+    </div>
+    <iframe 
+      class="map-container"
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3859.6301065479734!2d120.52805751173345!3d14.676920985759336!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x339640000f390aad%3A0x282a05eee202e317!2sBataan%20Peninsula%20State%20University!5e0!3m2!1sen!2sph!4v1746971442035!5m2!1sen!2sph" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" 
+      loading="lazy">
+    </iframe>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="logo-content">
+        <a href="index.html"><img src="img/img/WeCollect-logo.svg" alt="logo" class="logo-img"></a>
+        <p>123-456-789</p>
+      </div>
+      <div class="footer-links-container">
+        <div class="message">
+          <p>
+            We Collect offers reliable and eco-friendly waste collection services. From household to commercial waste, we help keep communities clean while promoting sustainability.
+            </p>
+        </div>
+        <div class="footer-wastetypes">
+          <strong>Waste Types</strong>
+          <ul class="waste-types">
+            <li>
+              <a href="your-waste-contents/cardboard -waste.html">Cardboard Waste</a>
+            </li>
+            <li>
+              <a href="your-waste-contents/clinical-waste.html">Clinical Waste</a>
+            </li>
+            <li>
+              <a href="your-waste-contents/confidential-waste.html">Confidential Waste</a>
+            </li>
+            <li>
+              <a href="your-waste-contents/dry-mixed-recycling.html">Dry Mixed Recycling</a>
+            </li>
+            <li>
+              <a href="your-waste-contents/general-waste.html">General Waste</a>
+            </li>
+            <li>
+              <a href="your-waste-contents/glass-waste.html">Glass Waste</a>
+            </li>
+            <li>
+              <a href="your-waste-contents/plastic-waste.html">Plastic Waste</a>
+            </li>
+            <li>
+              <a href="your-waste.html">All Waste</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-sectors">
+          <strong>Sectors</strong>
+          <ul class="sectors">
+            <li>
+              <a href="sectors-contents/healthcare.html">Healthcare</a>
+            </li>
+            <li>
+              <a href="sectors-contents/education.html">Education</a>
+            </li>
+            <li>
+              <a href="sectors-contents/retail.html">Retail</a>
+            </li>
+            <li>
+              <a href="sectors-contents/hospitality.html">Hospitality</a>
+            </li>
+            <li>
+              <a href="sectors-contents/offices.html">Offices</a>
+            </li>
+            <li>
+              <a href="sectors-contents/construction.html">Construction</a>
+            </li>
+            <li>
+              <a href="sectors-contents/transportation.html">Transfortation & Logistics</a>
+            </li>
+            <li>
+              <a href="sectors-contents/factories.html">Factories & Manufacturing</a>
+            </li>
+            <li>
+              <a href="sectors.html">All Sectors</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-services">
+          <strong>Services</strong>
+          <ul class="services">
+            <li>
+              <a href="services-contents/waste-collection.html">Waste Collection</a>
+            </li>
+            <li>
+              <a href="services-contents/waste-consultant.html">Waste Consultant</a>
+            </li>
+            <li>
+              <a href="services-contents/waste-management-plan.html">Waste Management</a>
+            </li>
+            <li>
+              <a href="services-contents/waste-audit.html">Waste Audit</a>
+            </li>
+            <li>
+              <a href="services-contents/waste-management-plan.html">Waste Management Plan</a>
+            </li>
+            <li>
+              <a href="services-contents/waste-disposal.html">Waste Disposal</a>
+            </li>
+            <li>
+              <a href="services-contents/commercial-recycling.html">Commercial Recycling</a>
+            </li>
+            <li>
+              <a href="services-contents/recycling-rebates.html">Recycling Rebates</a>
+            </li>
+            <li>
+              <a href="services-contents/business-waste-collection.html">Business Waste Collection</a>
+            </li>
+            <li>
+              <a href="services.html">All Services</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <strong>Popular</strong>
+          <ul>
+            <li><a id="" href="index.html">Home</a></li>
+            <li><a id="" href="your-waste.html">Your Waste</a></li>
+            <li><a id="" href="sectors.html">Sectors</a></li>
+            <li><a id="" href="free-items.html">Free Items</a></li>
+            <li><a id="" href="services.html">Services</a></li>
+            <li><a id="" href="location.html">Location</a></li>
+            <li><a id="" href="news.html">News</a></li>
+            <li><a id="" href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+</main>
+</body>
+</html>

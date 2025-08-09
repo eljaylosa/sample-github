@@ -1,0 +1,145 @@
+* {
+  font-family: 'Segoe UI', Verdana, Geneva, Tahoma, sans-serif;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+/*This section is for nav bar*/
+.logo img {
+  height: 200px;
+}
+.nav-bar-container {
+  background: linear-gradient(to right, #E8F5E9, #C8E6C9); /* soft green blend */
+  font-size: medium;
+  display: flex;
+  padding: 10px 0;
+  height: 75px;
+  width: 100%;
+  box-shadow: 0 4px 10px rgba(76, 175, 80, 0.25);
+  position: fixed;
+  top: 0;
+  z-index: 999;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.logo {
+  margin-left: 100px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #2E7D32;
+}
+
+.nav-links {
+  display: flex;
+  position: absolute;
+  right: 0;
+  margin-right: 100px;
+}
+
+.nav-links ul {
+  display: flex;
+  list-style-type: none;
+}
+
+.nav-links ul li a {
+  position: relative;
+  text-decoration: none;
+  color: #2E7D32;
+  font-size: large;
+  font-weight: 600;
+  margin: 0px 15px;
+  padding: 8px 0;
+  transition: color 0.3s ease;
+}
+
+.nav-links ul li a::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  height: 3px;
+  width: 100%;
+  background-color: #66BB6A;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease-in-out;
+  border-radius: 2px;
+}
+
+.nav-links ul li a:hover {
+  color: #00f811;
+}
+
+.nav-links ul li a:hover::after {
+  transform: scaleX(1);
+}
+
+
+.footer {
+  background: linear-gradient(135deg, #355E3B, #2E8B57);
+  color: #f0f0f0;
+  padding: 40px 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.logo-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 200px;
+}
+.logo-content p {
+  font-weight: bolder;
+  font-size: 3em;
+}
+.footer-links-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+strong {
+  font-size: large;
+}
+.message {
+  font-size: large;
+  text-align: justify;
+  width: 20%;
+}
+ul {
+  list-style: none;
+}
+li {
+  margin: 5px 0;
+}
+  a {
+    font-size: large;
+    text-decoration: none;
+    color:  #d4f0c0;
+}
+a:hover {
+  text-decoration: underline;
+}
+.logo-img {
+  width: 200px;
+}
+
+#logout {
+  color: black;
+  padding: 15px;
+  background-color: rgb(162, 233, 162);
+  border-radius: 15px;
+  transition: .2s;
+}
+#logout:hover {
+  color: rgb(255, 255, 255);
+  background-color: #306538;
+}
+
+
