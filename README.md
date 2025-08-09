@@ -1,1 +1,1 @@
-Wala itong readme, tinatamad ako gumawa ehe
+E-Business Project Website - Waste Collection Website - We Collect
